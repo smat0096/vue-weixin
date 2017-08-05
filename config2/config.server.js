@@ -1,13 +1,10 @@
 let isProd = process.env.NODE_ENV === 'production'
 let prod = require('./config.prod.js')
 module.exports = {
-  browserSync: {
-    index: 'index.html',
-    startPath: '/loading.html'
-  },
+  browserSync: {},
   //代理
   proxy: {
-    isProxy: true,
+    isProxy: false,
     proxyTable: {
       '/xbs/p/interface': {
         target: 'http://xbs.app.abs50.com',
@@ -25,8 +22,7 @@ module.exports = {
     uploadUrl: '',
     uploadDir: ''
   },
-  serverType: 'middleware',
   //热替换与hash冲突
   hotRepalce: !isProd,
-  autoOpenBrowser: false
+  autoOpenBrowser: true
 }

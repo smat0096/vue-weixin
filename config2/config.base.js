@@ -1,6 +1,7 @@
 'use strict'
 let srcPath = __dirname + '/../src'
 let destPath = __dirname + '/../dist'
+let path = require('path')
 let prod = require('./config.prod.js')
 let config = {
   src: {
@@ -27,7 +28,7 @@ let config = {
   //测试文件配置
   test: {
     path: __dirname + '/../test',
-    baseUrl: 'http://localhost:80' //'http://xbs.app.abs50.com/xbs/app' //
+    baseUrl: 'http://localhost:80'
   },
   // 别名
   alias: {

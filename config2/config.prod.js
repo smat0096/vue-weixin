@@ -13,7 +13,7 @@ module.exports = {
   minCss: isProd,
   minJs: isProd,
   minImg: isProd,
-  sourceMap: isProd,
+  sourceMap: false,
   // 远程服务器数据接口
   env: {
     NODE_ENV: 'production'
