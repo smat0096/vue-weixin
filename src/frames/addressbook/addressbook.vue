@@ -52,7 +52,7 @@
 					<li v-for="(value, key, index) in manageaddress" :key="key" class="addlistLi" >
 						<h1>{{key}}</h1>
 						<ul>
-							<router-link to="/addressbook/details" tag="li" v-for="(item, index) in value" @click.native='detailMessage(item)' :key="item">
+							<router-link to="/addressbook/details" tag="li" v-for="(item, key, index) in value" @click.native='detailMessage(item)' :key="key">
 								<div class="personlist_img">
 									<img :src="item.headurl" alt="">
 								</div>
@@ -66,7 +66,7 @@
 				<section class="guide_wipe">
 					<section class="list_guide">
 						<dl>
-							<dd v-for="(value, index) in sortlist" :key="index" @touchstart="startThing(value)" @touchend="endThing">{{value}}</dd>
+							<dd v-for="(value,key, index) in sortlist" :key="key" @touchstart="startThing(value)" @touchend="endThing">{{value}}</dd>
 						</dl>
 						<p>#</p>
 					</section>

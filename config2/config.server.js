@@ -23,5 +23,6 @@ module.exports = {
   },
   //热替换与hash冲突
   hotRepalce: !isProd,
+  fallback: true,
   autoOpenBrowser: true
 }

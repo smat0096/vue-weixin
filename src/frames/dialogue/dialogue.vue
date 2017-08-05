@@ -17,7 +17,7 @@
 			<!-- 对话列表 -->
 			<section class="conversation">
 				<ul>
-					<router-link to="/singlechat" tag="li" v-for="item in dialogueList" @click.native="refreshInfor(item)" :key="item">
+					<router-link to="/singlechat" tag="li" v-for="(item,key,index) in dialogueList" @click.native="refreshInfor(item)" :key="key">
 						<div class="imgwipe">
 							<i class="redicon_num" v-if="newinfor">
 							1
