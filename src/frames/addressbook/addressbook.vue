@@ -52,7 +52,7 @@
 					<li v-for="(value, key, index) in manageaddress" :key="key" class="addlistLi" >
 						<h1>{{key}}</h1>
 						<ul>
-							<router-link to="/addressbook/details" tag="li" v-for="(item, index) in value" @click.native='detailMessage(item)'>
+							<router-link to="/addressbook/details" tag="li" v-for="(item, index) in value" @click.native='detailMessage(item)' :key="item">
 								<div class="personlist_img">
 									<img :src="item.headurl" alt="">
 								</div>

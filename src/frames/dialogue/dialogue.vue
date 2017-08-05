@@ -17,7 +17,7 @@
 			<!-- 对话列表 -->
 			<section class="conversation">
 				<ul>
-					<router-link to="/singlechat" tag="li" v-for="item in dialogueList" @click.native="refreshInfor(item)">
+					<router-link to="/singlechat" tag="li" v-for="item in dialogueList" @click.native="refreshInfor(item)" :key="item">
 						<div class="imgwipe">
 							<i class="redicon_num" v-if="newinfor">
 							1
@@ -212,7 +212,7 @@
 	}
 </script>
 <style lang="scss" scoped>
-	@import "src/style/public";
+	@import "~src/style/public";
 	.router-show-enter-active,.router-show-leave-active{
 		transition: all .4s;
 	}

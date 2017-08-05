@@ -99,7 +99,7 @@
 	}
 </script>
 <style lang="scss" scoped>
-	@import "src/style/public";
+	@import "~src/style/public";
 	.router-show-enter-active,.router-show-leave-active{
 		transition: all .4s;
 	}

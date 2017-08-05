@@ -55,7 +55,7 @@
 	}
 </script>
 <style lang="scss" scoped>
-	@import "src/style/public";
+	@import "~src/style/public";
 	.searchpart{
 		@include widthHeight(12rem,1.2rem);
 		border-bottom:1px solid #45c01a;

@@ -47,7 +47,7 @@
 	}
 </script>
 <style lang="scss" scoped>
-	@import "src/style/public";
+	@import "~src/style/public";
 	.child_page{
 		position: absolute;
 		top: 0;

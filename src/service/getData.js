@@ -12,7 +12,7 @@ import fetch from '../config/fetch.js'
 
 
 const setpromise = data => {
-	return new Promise((resolve, reject) => {
+	return new Promise(resolve=> {
 		resolve(data)
 	})
 }
