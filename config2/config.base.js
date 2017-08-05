@@ -1,6 +1,6 @@
 'use strict'
 let srcPath = __dirname + '/../src'
-let destPath = __dirname + '/../dist'
+let destPath = __dirname + '/../weixin'
 let path = require('path')
 let prod = require('./config.prod.js')
 let config = {
