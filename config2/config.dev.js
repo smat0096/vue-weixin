@@ -6,7 +6,6 @@ module.exports = {
   publicPathInCss: '../',
   // 环境&业务全局数据
   env: Object.assign(prod.env, {
-    NODE_ENV: 'development',
-    URL_PORT: '8882'
+    NODE_ENV: 'development'
   })
 }

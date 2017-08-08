@@ -2,6 +2,7 @@
 let srcPath = __dirname + '/../src'
 let destPath = __dirname + '/../weixin'
 let path = require('path')
+let dev = require('./config.dev.js')
 let prod = require('./config.prod.js')
 let config = {
   src: {
@@ -37,12 +38,11 @@ let config = {
   }
 }
 
+//环境
 config = Object.assign(
   config,
   prod,
-  require('./config.dev.js'),
-  require('./config.server.js'),
-  require('./config.upload.js')
+  dev
 )
 
 if (process.env.NODE_ENV === 'production') {
@@ -52,6 +52,11 @@ if (process.env.NODE_ENV === 'production') {
   )
 }
 
-// config.webpackExtend = require('./config.webpack-extend.js')
+//本地服务器配置
+config.server = require('./config.server.js')(config)
+//上传配置
+config.upload = require('./config.upload.js')(config)
+//webpackExtend
+// config.webpackExtend = require('./config.webpack-extend.js')(config)
 
 module.exports = config
