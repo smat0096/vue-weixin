@@ -21,7 +21,7 @@ module.exports = function(config) {
       // uploadUrl: '',
       // uploadDir: ''
     },
-    port: 8882,
+    port: 80,
     type: 'express',
     //热替换与hash冲突
     hotRepalce: !isProduction,

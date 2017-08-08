@@ -121,7 +121,7 @@
 	import {mapState, mapActions, mapMutations} from 'vuex';
 	import {groupChat, chatData, getHistory} from 'src/service/getData';
 	import {imgurl} from 'src/config/env';
-	import 'src/config/swiper.min.js' 
+	require('src/config/swiper.min.js') 
 	import 'src/style/swiper.min.css'
 	import fetch from 'src/config/fetch'
 	const socket = io('http://cangdu.org:8003');

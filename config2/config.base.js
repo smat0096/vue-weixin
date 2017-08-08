@@ -30,8 +30,7 @@ let config = {
   alias: {
     '@': srcPath,
     'node_modules': __dirname + '/../node_modules',
-    'ksutils': '@/utils/ksutils',
-    'vue$': 'node_modules/vue/dist/vue.common.js',
+    'vue$': 'vue/dist/vue.common.js',
     'src': srcPath,
     'assets': path.resolve(__dirname, '../src/assets'),
     'components': path.resolve(__dirname, '../src/components')
@@ -57,6 +56,6 @@ config.server = require('./config.server.js')(config)
 //上传配置
 config.upload = require('./config.upload.js')(config)
 //webpackExtend
-// config.webpackExtend = require('./config.webpack-extend.js')(config)
+config.webpackExtend = require('./config.webpack-extend.js')(config)
 
 module.exports = config
